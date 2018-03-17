@@ -1,0 +1,17 @@
+﻿pop_type = grain_farmer {
+    produces=grain
+    prod_rate = 1.1
+    needs = {
+        grain or vegetables
+        hand_tools
+        draft_animals
+       }
+    wants = {
+        riding_animals
+        books
+        meat
+        small_arms
+        riding_animals
+       }
+    
+}
