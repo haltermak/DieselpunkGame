@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{79E2FC88-F3F8-47E7-94AE-6FF389657B96}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Parser.cs">
+    <Files>
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Parser.cs" Line="26" Column="30" />
+      <File FileName="configs/readmes/goods_config_readme.txt" Line="1" Column="1" />
+      <File FileName="configs/goods_config.txt" Line="7" Column="24" />
+      <File FileName="configs/population_config.txt" Line="1" Column="30" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.DieselpunkGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

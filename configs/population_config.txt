@@ -1,8 +1,8 @@
-﻿*pop_type* = grain_farmer {
+﻿*pop_type* = <grain_farmer> {
     *produces*=[grain]
     *prod_rate* = 2
     *needs* = {
-        [grain or vegetables]
+        [grain] or [vegetables]
         [hand_tools]
         [draft_animals]
        }
