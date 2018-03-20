@@ -1,0 +1,14 @@
+﻿*state* = <0001> {
+    *name* = <naoto>
+    *owner* = [Jotena]
+    *capital_county* = [00001]
+    *counties* = {
+        [00001]
+        [00002]
+        [00003]
+        [00004]
+        [00005]
+    }
+    *autonomy_type* = [capital]
+    *region* = [001]
+}

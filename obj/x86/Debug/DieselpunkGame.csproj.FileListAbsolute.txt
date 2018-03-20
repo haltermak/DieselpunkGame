@@ -1,0 +1,5 @@
+/home/kyle/Projects/DieselpunkGame/DieselpunkGame/bin/Debug/DieselpunkGame.exe
+/home/kyle/Projects/DieselpunkGame/DieselpunkGame/bin/Debug/DieselpunkGame.pdb
+/home/kyle/Projects/DieselpunkGame/DieselpunkGame/obj/x86/Debug/DieselpunkGame.csproj.CoreCompileInputs.cache
+/home/kyle/Projects/DieselpunkGame/DieselpunkGame/obj/x86/Debug/DieselpunkGame.exe
+/home/kyle/Projects/DieselpunkGame/DieselpunkGame/obj/x86/Debug/DieselpunkGame.pdb

@@ -34,10 +34,15 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Parser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="configs\population_config.txt" />
     <None Include="configs\readmes\population_config_readme.txt" />
+    <None Include="configs\goods_config.txt" />
+    <None Include="configs\readmes\goods_config_readme.txt" />
+    <None Include="configs\states_config.txt" />
+    <None Include="configs\readmes\states_config_readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="configs\readmes\" />
