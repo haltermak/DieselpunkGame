@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{79E2FC88-F3F8-47E7-94AE-6FF389657B96}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Parser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="configs/states_config.txt">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="Parser.cs" Line="26" Column="30" />
-      <File FileName="configs/readmes/goods_config_readme.txt" Line="1" Column="1" />
-      <File FileName="configs/goods_config.txt" Line="7" Column="24" />
-      <File FileName="configs/population_config.txt" Line="1" Column="30" />
+      <File FileName="Program.cs" Line="92" Column="19" />
+      <File FileName="Parser.cs" Line="32" Column="92" />
+      <File FileName="configs/states_config.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

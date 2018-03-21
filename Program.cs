@@ -10,8 +10,8 @@ namespace DieselpunkGame
         internal static string popFile = Path.Combine(projectFolder, @"configs/population_config.txt");
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            setupPops(popFile);
+            DPGConfigParse.StateConfigParser state = new DPGConfigParse.StateConfigParser();
+            state.tempMakeJson();
 
             //moisture_farmers.printPopulation();
         }
@@ -87,7 +87,27 @@ namespace DieselpunkGame
         
     }
     internal class State {
-        
+        public int id;
+        public string name;
+        public int region;
+        public string capital;
+        public int[] counties;
+
+        internal State(int idI, int regionI, string nameS, string capitalS, int[] countiesA){
+            id = idI;
+            region = regionI;
+            name = nameS;
+            capital = capitalS;
+            counties = countiesA;
+        }
+
+        public override string ToString(){
+            string output = id.ToString();
+            output = output + region.ToString();
+            output = output + name;
+            output = output + capital;
+            return output;
+        }
     }
 }
 

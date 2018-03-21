@@ -3,3 +3,11 @@
 /home/kyle/Projects/DieselpunkGame/DieselpunkGame/obj/x86/Debug/DieselpunkGame.csproj.CoreCompileInputs.cache
 /home/kyle/Projects/DieselpunkGame/DieselpunkGame/obj/x86/Debug/DieselpunkGame.exe
 /home/kyle/Projects/DieselpunkGame/DieselpunkGame/obj/x86/Debug/DieselpunkGame.pdb
+/home/kyle/Projects/DieselpunkGame/dieselpunk/obj/x86/Debug/DieselpunkGame.csprojResolveAssemblyReference.cache
+/home/kyle/Projects/DieselpunkGame/dieselpunk/obj/x86/Debug/DieselpunkGame.csproj.CoreCompileInputs.cache
+/home/kyle/Projects/DieselpunkGame/dieselpunk/obj/x86/Debug/DieselpunkGame.exe
+/home/kyle/Projects/DieselpunkGame/dieselpunk/obj/x86/Debug/DieselpunkGame.pdb
+/home/kyle/Projects/DieselpunkGame/dieselpunk/bin/Debug/DieselpunkGame.exe
+/home/kyle/Projects/DieselpunkGame/dieselpunk/bin/Debug/DieselpunkGame.pdb
+/home/kyle/Projects/DieselpunkGame/dieselpunk/bin/Debug/Newtonsoft.Json.dll
+/home/kyle/Projects/DieselpunkGame/dieselpunk/bin/Debug/Newtonsoft.Json.xml

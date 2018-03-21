@@ -1,14 +1,13 @@
-﻿*state* = <0001> {
-    *name* = <naoto>
-    *owner* = [Jotena]
-    *capital_county* = [00001]
-    *counties* = {
-        [00001]
-        [00002]
-        [00003]
-        [00004]
-        [00005]
-    }
-    *autonomy_type* = [capital]
-    *region* = [001]
+{
+  "id": 1,
+  "name": "Kallentor",
+  "region": 1,
+  "capital": "Selin",
+  "counties": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
 }
