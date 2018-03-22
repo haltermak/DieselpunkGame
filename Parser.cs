@@ -2,6 +2,7 @@
 using System.IO;
 using DieselpunkGame;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 namespace DPGConfigParse
 {
     /*
@@ -9,40 +10,65 @@ namespace DPGConfigParse
      */
     public class ConfigParser
     {
-        protected static string stateConfigFilePath;
-        protected static string stateLogFilePath;
-        protected static string projectFolder;
+        protected const string stateConfigFilePath = @"configs/states_config.txt";
+        protected const string stateLogFilePath = @"logs/states_log.txt";
+        protected static readonly string projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
         protected System.IO.StreamReader configReader;
         protected System.IO.StreamWriter configWriter; //This should be removed once a JSON format is finalized for all objects needing parsing
         protected System.IO.StreamWriter logWriter;
         public ConfigParser()
         {
-            projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            stateConfigFilePath = @"configs/states_config.txt";
-            stateLogFilePath = @"logs/states_log.txt";
+            
         }
 
     }
 
     public class StateConfigParser : ConfigParser
     {
-        internal int tempMakeJson() {
+        /*internal int tempMakeJson()
+        {
             int[] c = { 0, 1, 2, 3, 4 };
-            State kallentor = new State(1,1,"Kallentor", "Selin", c);
-            string writeToFile = JsonConvert.SerializeObject(kallentor, Formatting.Indented);
-            try {
-                configWriter = new StreamWriter(Path.Combine(projectFolder,stateConfigFilePath));
+            State kallentor = new State(1, 1, "Kallentor", "Selin", c);
+            int[] d = { 5, 6, 7, 8, 9 };
+            State najento = new State(2, 1, "Najento", "Ashen", d);
+            State[] states = { kallentor, najento };
+            string writeToFile = JsonConvert.SerializeObject(states, Formatting.Indented);
+            try
+            {
+                configReader.Close();
+                configWriter = new StreamWriter(Path.Combine(projectFolder, stateConfigFilePath));
                 configWriter.Write(writeToFile);
                 configWriter.Close();
-            } catch {
+                configReader = new StreamReader(Path.Combine(projectFolder, stateConfigFilePath));
+            }
+            catch
+            {
                 Console.WriteLine("Done goofed buddy");
             }
             return 0;
-        }
+        }*/ //This function only makes a short json file for two states. It shouldn't be needed again unless you're an idiot and delete the file.
         int stateCount;
-        public StateConfigParser() : base()
+        internal StateConfigParser() : base()
         {
-            
+            try
+            {
+                logWriter = new StreamWriter(Path.Combine(projectFolder, stateLogFilePath));
+                configReader = new StreamReader(Path.Combine(projectFolder, stateConfigFilePath));
+            } catch {
+                Console.Write("Something messed up while opening the files.");
+            }
+
+        } //TODO: Turn this into working code. You need to not make this the constructor, and instead a function that returns a list of States.
+
+        internal List<State> parseStates(){
+            List<State> states = JsonConvert.DeserializeObject<List<State>>(configReader.ReadToEnd());
+            return states;
+        }
+
+        ~StateConfigParser() {
+            configReader.Close();
+            //configWriter.Close();
+            logWriter.Close();
         }
     }
 }

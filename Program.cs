@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections;
-
+using System.Collections.Generic;
 namespace DieselpunkGame
 {
     class MainClass
@@ -10,8 +10,12 @@ namespace DieselpunkGame
         internal static string popFile = Path.Combine(projectFolder, @"configs/population_config.txt");
         public static void Main(string[] args)
         {
+            List<State> newStates;
             DPGConfigParse.StateConfigParser state = new DPGConfigParse.StateConfigParser();
-            state.tempMakeJson();
+            newStates = state.parseStates();
+            foreach (State s in newStates) {
+                Console.WriteLine(s.ToString());
+            }
 
             //moisture_farmers.printPopulation();
         }
@@ -45,10 +49,11 @@ namespace DieselpunkGame
                 Console.WriteLine("File could not be read");
             }
         }
-#endregion
+        #endregion
     }
-    internal class Population {
-        
+    internal class Population
+    {
+
         int populationSize;
         int populationMoney;
         int populationHappiness;
@@ -57,17 +62,20 @@ namespace DieselpunkGame
         int populationPercentageEmployed;
         double populationProducedGoods;
 
-        internal Population() {
+        internal Population()
+        {
             populationPercentageNeedsMet = 100;
             populationPercentageEmployed = 100;
             populationPercentageWantsMet = 100;
         }
 
-        internal Population(string inputEntry) {
-            
+        internal Population(string inputEntry)
+        {
+
         }
 
-        internal void printPopulation() {
+        internal void printPopulation()
+        {
             Console.WriteLine(populationSize);
             Console.WriteLine(populationMoney);
             Console.WriteLine(populationHappiness);
@@ -77,23 +85,28 @@ namespace DieselpunkGame
             Console.WriteLine(populationPercentageWantsMet);
         }
     }
-    internal class Occupation {
-        
+    internal class Occupation
+    {
+
     }
-    internal class Culture {
-        
+    internal class Culture
+    {
+
     }
-    internal class Province {
-        
+    internal class Province
+    {
+
     }
-    internal class State {
+    internal class State
+    {
         public int id;
         public string name;
         public int region;
         public string capital;
         public int[] counties;
 
-        internal State(int idI, int regionI, string nameS, string capitalS, int[] countiesA){
+        internal State(int idI, int regionI, string nameS, string capitalS, int[] countiesA)
+        {
             id = idI;
             region = regionI;
             name = nameS;
@@ -101,7 +114,12 @@ namespace DieselpunkGame
             counties = countiesA;
         }
 
-        public override string ToString(){
+        internal State() {
+            
+        }
+
+        public override string ToString()
+        {
             string output = id.ToString();
             output = output + region.ToString();
             output = output + name;
@@ -109,8 +127,8 @@ namespace DieselpunkGame
             return output;
         }
     }
-}
 
+}
 /*
  *             try {
                 using (StreamReader sr = new StreamReader(pop_config)) {
