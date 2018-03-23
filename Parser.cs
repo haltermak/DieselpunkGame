@@ -47,7 +47,6 @@ namespace DPGConfigParse
             }
             return 0;
         }*/ //This function only makes a short json file for two states. It shouldn't be needed again unless you're an idiot and delete the file.
-        int stateCount;
         internal StateConfigParser() : base()
         {
             try
@@ -58,7 +57,7 @@ namespace DPGConfigParse
                 Console.Write("Something messed up while opening the files.");
             }
 
-        } //TODO: Turn this into working code. You need to not make this the constructor, and instead a function that returns a list of States.
+        } 
 
         internal List<State> parseStates(){
             List<State> states = JsonConvert.DeserializeObject<List<State>>(configReader.ReadToEnd());

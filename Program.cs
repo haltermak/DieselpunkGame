@@ -67,6 +67,10 @@ namespace DieselpunkGame
             populationPercentageNeedsMet = 100;
             populationPercentageEmployed = 100;
             populationPercentageWantsMet = 100;
+            populationSize = 100;
+            populationMoney = 0;
+            populationHappiness = 100;
+            populationProducedGoods = 1.3;
         }
 
         internal Population(string inputEntry)
@@ -93,16 +97,24 @@ namespace DieselpunkGame
     {
 
     }
-    internal class Province
+    internal class County
     {
+        public int id;
+        public string name;
+        public List<Population> pops;
 
+        internal County(){
+            id = 0;
+            name = "";
+            pops = null;
+        }
     }
     internal class State
     {
         public int id;
         public string name;
-        public int region;
-        public string capital;
+        public int region; //should eventually be a region reference
+        public string capital; //should reference a County
         public int[] counties;
 
         internal State(int idI, int regionI, string nameS, string capitalS, int[] countiesA)
