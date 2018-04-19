@@ -1,0 +1,34 @@
+{
+  "aristocrat": {
+    "name": "aristocrat",
+    "code": 0,
+    "needsWants": [
+      {
+        "isNeed": true,
+        "goodType": "grain",
+        "amountToRequest": 1
+      },
+      {
+        "isNeed": false,
+        "goodType": "vegetables",
+        "amountToRequest": 1
+      }
+    ]
+  },
+  "artisan": {
+    "name": "artisan",
+    "code": 1,
+    "needsWants": [
+      {
+        "isNeed": true,
+        "goodType": "grain",
+        "amountToRequest": 1
+      },
+      {
+        "isNeed": false,
+        "goodType": "vegetables",
+        "amountToRequest": 1
+      }
+    ]
+  }
+}

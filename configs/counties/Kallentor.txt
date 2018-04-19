@@ -1,0 +1,27 @@
+{
+  "pops": [
+    {
+      "popType": 0,
+      "populationSize": 100,
+      "populationMoney": 0,
+      "populationPercentageNeedsMet": 100,
+      "populationPercentageWantsMet": 100,
+      "populationPercentageEmployed": 100
+    },
+    {
+      "popType": 0,
+      "populationSize": 100,
+      "populationMoney": 0,
+      "populationPercentageNeedsMet": 100,
+      "populationPercentageWantsMet": 100,
+      "populationPercentageEmployed": 100
+    }
+  ],
+  "id": 0,
+  "name": "Selin",
+  "infrastructure": null,
+  "terrainCode": 0,
+  "size": 0,
+  "coastal": false,
+  "deposits": null
+}

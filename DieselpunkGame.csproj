@@ -47,6 +47,9 @@
     <None Include="configs\states_config.txt" />
     <None Include="configs\readmes\states_config_readme.txt" />
     <None Include="packages.config" />
+    <None Include="configs\counties\Kallentor.txt" />
+    <None Include="configs\cultures_config.txt" />
+    <None Include="configs\pop_types.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="configs\readmes\" />

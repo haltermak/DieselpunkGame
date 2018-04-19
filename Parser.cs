@@ -12,6 +12,10 @@ namespace DPGConfigParse
     {
         protected const string stateConfigFilePath = @"configs/states_config.txt";
         protected const string stateLogFilePath = @"logs/states_log.txt";
+        protected const string cultureLogFilePath = @"logs/cultures_log.txt";
+        protected const string cultureConfigFilePath = @"configs/cultures_config.txt";
+        protected const string PopTypeLogFilePath = @"/logs/pop_types.txt";
+        protected const string PopTypeConfigFilePath = @"/configs/pop_types.txt";
         protected static readonly string projectFolder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
         protected System.IO.StreamReader configReader;
         protected System.IO.StreamWriter configWriter; //This should be removed once a JSON format is finalized for all objects needing parsing
@@ -64,10 +68,49 @@ namespace DPGConfigParse
             return states;
         }
 
-        ~StateConfigParser() {
-            configReader.Close();
+        /*~StateConfigParser() {
+            configReader.Dispose();
             //configWriter.Close();
-            logWriter.Close();
+            logWriter.Dispose();
+        }*/
+    }
+
+    public class CultureParser : ConfigParser {
+        internal CultureParser() : base() {
+            try {
+                logWriter = new StreamWriter(Path.Combine(projectFolder, cultureLogFilePath));
+                configReader = new StreamReader(Path.Combine(projectFolder, cultureConfigFilePath));
+            } catch {
+                Console.Write("Something wrong while opening culture file.");
+            }
+        }
+
+        internal Dictionary<string, Culture> parseCultures()
+        {
+            Dictionary<string, Culture> cultures = JsonConvert.DeserializeObject<Dictionary<string, Culture>>(configReader.ReadToEnd());
+            return cultures;
+        }
+    }
+
+    public class PopTypeParser : ConfigParser
+    {
+        internal PopTypeParser() : base()
+        {
+            try
+            {
+                logWriter = new StreamWriter(Path.Combine(projectFolder, PopTypeLogFilePath));
+                configReader = new StreamReader(Path.Combine(projectFolder, PopTypeConfigFilePath));
+            }
+            catch
+            {
+                Console.Write("Something wrong while opening culture file.");
+            }
+        }
+
+        internal Dictionary<string, Culture> parseCultures()
+        {
+            Dictionary<string, Culture> cultures = JsonConvert.DeserializeObject<Dictionary<string, Culture>>(configReader.ReadToEnd());
+            return cultures;
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "kallentor": {
+    "name": "kallentorian",
+    "prestige": 100
+  },
+  "najento": {
+    "name": "Najentoan",
+    "prestige": 150
+  }
+}
